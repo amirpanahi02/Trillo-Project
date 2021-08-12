@@ -1,20 +1,4 @@
-/*
-COLORS
 
-Primary: #eb2f64
-Primary light: #FF3366
-Primary dark: #BA265D
-
-Grey light 1: #faf9f9
-Grey light 2: #f4f2f2
-Grey light 3: #f0eeee
-Grey light 4: #ccc
-
-Grey dark 1: #333
-Grey dark 2: #777
-Grey dark 3: #999
-
-*/ 
 :root {
     --color-primary: #eb2f64;
     --color-primary-light: #FF3366;
@@ -34,6 +18,12 @@ Grey dark 3: #999
 
     --line: 1px solid var(--color-grey-light-3)
 }
+
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 56.25em;
+$bp-small: 37.5em;
+$bp-smallest: 31.25em;
 *,
 *::after,
 *::before {
@@ -45,6 +35,10 @@ Grey dark 3: #999
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-large){
+        font-size: 50%;
+    }
 }
 
 body {
